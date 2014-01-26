@@ -15,10 +15,13 @@
 #include <string>
 #include "uint256.h"
 
+#define PORT 21337
+#define PORT_TESTNET 31337
+
 extern bool fTestNet;
 static inline unsigned short GetDefaultPort(const bool testnet = fTestNet)
 {
-    return testnet ? 19333 : 9333;
+    return testnet ? PORT_TESTNET : PORT;
 }
 
 
